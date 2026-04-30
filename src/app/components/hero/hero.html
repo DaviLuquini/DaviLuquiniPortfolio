@@ -1,0 +1,62 @@
+<section id="home" aria-label="Introduction" class="bg-white border-b-[3px] border-black">
+  <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-12 lg:gap-20">
+
+      <!-- Text content -->
+      <div class="flex-1">
+        <div class="inline-flex items-center gap-2 border-[3px] border-black px-4 py-2 shadow-[3px_3px_0_#000] mb-8"
+          role="status" aria-label="Currently Online">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
+          <span class="font-bold text-sm uppercase tracking-widest">Online Now</span>
+        </div>
+
+        <h1 class="font-black text-5xl md:text-7xl leading-[1.05] tracking-tighter mb-6">
+          Hi, I'm<br>
+          <span class="bg-[#FF6B7A] px-2 inline-block -rotate-1">Davi Luquini</span>,<br>
+          a <span class="bg-[#2F81F7] text-white px-2">Fullstack</span><br>
+          Developer.
+        </h1>
+
+        <p class="text-[#393939] text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
+          3+ years building scalable web applications using <strong>C#</strong>, <strong>.NET</strong>,
+          <strong>Java</strong>
+          <strong>Angular</strong>, and <strong>React</strong>. Based in Salvador, Brazil.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-10" role="list" aria-label="Core technologies">
+          @for (tech of techs; track tech) {
+          <span role="listitem" class="font-bold text-sm border-[3px] border-black px-3 py-1 shadow-[3px_3px_0_#000]">
+            {{ tech }}
+          </span>
+          }
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects"
+            class="font-black text-base px-7 py-3.5 bg-black text-white border-[3px] border-black shadow-[5px_5px_0_#FF6B7A] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            See my projects →
+          </a>
+          <a href="mailto:daviluquini7@gmail.com"
+            class="font-black text-base px-7 py-3.5 bg-white text-black border-[3px] border-black shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            Contact me
+          </a>
+        </div>
+      </div>
+
+      <!-- Avatar card -->
+      <div class="hidden md:block flex-shrink-0" aria-hidden="true">
+        <div class="relative">
+          <div
+            class="w-60 h-60 border-[3px] border-black shadow-[8px_8px_0_#000] bg-[#FF6B6B] flex items-center justify-center">
+            <span class="font-black text-8xl text-white select-none">DL</span>
+          </div>
+          <div
+            class="absolute -bottom-4 -right-4 bg-[#FFC224] border-[3px] border-black px-3 py-1.5 font-black text-xs uppercase tracking-widest shadow-[3px_3px_0_#000]">
+            Salvador, Brazil
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

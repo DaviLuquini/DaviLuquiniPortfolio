@@ -1,0 +1,52 @@
+<section id="about" aria-labelledby="about-heading" class="bg-white border-b-[3px] border-black py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center gap-3 mb-12">
+      <span class="font-black text-sm uppercase tracking-widest bg-[#2F81F7] text-white px-3 py-1"
+        aria-hidden="true">01</span>
+      <h2 id="about-heading" class="font-black text-3xl md:text-4xl">About Me</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div>
+        <p class="text-[#393939] text-lg leading-relaxed mb-5">
+          I'm a <strong class="text-black">Fullstack Developer</strong> with 3+ years of professional experience
+          building scalable web applications. I work across the full stack — from robust REST APIs, structuring of
+          databases to support scalability to
+          high-performance front-end interfaces.
+        </p>
+
+        <p class="text-[#393939] text-lg leading-relaxed">
+          Pursuing a <strong class="text-black">Bachelor's in Software Engineering</strong> at the
+          Catholic University of Salvador (2023–2027).
+        </p>
+
+        <div class="grid grid-cols-3 gap-4 mt-10">
+          <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
+            <p class="font-black text-4xl text-[#FF6B7A]" aria-label="3 or more years">3+</p>
+            <p class="font-semibold text-sm text-[#393939] mt-1">Years exp.</p>
+          </div>
+          <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
+            <p class="font-black text-4xl text-[#2F81F7]">30+</p>
+            <p class="font-semibold text-sm text-[#393939] mt-1">Projects</p>
+          </div>
+          <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
+            <p class="font-black text-4xl text-[#6366F1]">100k+</p>
+            <p class="font-semibold text-sm text-[#393939] mt-1">Lines of Code</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-black text-xl mb-6 uppercase tracking-wide">Tech Stack</h3>
+        <div class="flex flex-wrap gap-2" role="list" aria-label="Technologies and skills">
+          @for (skill of skills; track skill) {
+          <span role="listitem"
+            class="font-bold text-sm border-[3px] border-black px-3 py-1.5 bg-white shadow-[3px_3px_0_#000] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150 cursor-default">
+            {{ skill }}
+          </span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
