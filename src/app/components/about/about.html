@@ -1,7 +1,7 @@
 <section id="about" aria-labelledby="about-heading" class="bg-white border-b-[3px] border-black py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex items-center gap-3 mb-12">
-      <span class="font-black text-sm uppercase tracking-widest bg-[#2F81F7] text-white px-3 py-1"
+      <span class="font-black text-sm uppercase tracking-widest bg-[#0D9488] text-white px-3 py-1"
         aria-hidden="true">01</span>
       <h2 id="about-heading" class="font-black text-3xl md:text-4xl">About Me</h2>
     </div>
@@ -20,17 +20,40 @@
           Catholic University of Salvador (2023–2027).
         </p>
 
+        <div class="mt-6 border-[3px] border-black p-4 shadow-[3px_3px_0_#C9FF47] relative overflow-hidden">
+          <div class="absolute inset-0 flex justify-around items-start" aria-hidden="true">
+            @for (icon of rainIcons; track $index) {
+              <img
+                [ngSrc]="'assets/icons/' + icon.src"
+                width="24"
+                height="24"
+                alt=""
+                class="rain-icon"
+                [style]="icon.style"
+              >
+            }
+          </div>
+          <div class="relative z-10">
+            <p class="font-black text-xs uppercase tracking-widest text-[#393939] mb-2">AI-Enhanced Workflow</p>
+            <p class="text-[#393939] text-sm leading-relaxed">
+              I use <strong class="text-black">Claude Code</strong>, <strong class="text-black">Cursor</strong>,
+              and <strong class="text-black">Codex</strong> as daily tools — delivering production-quality code
+              faster without compromising on architecture or best practices.
+            </p>
+          </div>
+        </div>
+
         <div class="grid grid-cols-3 gap-4 mt-10">
           <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
-            <p class="font-black text-4xl text-[#FF6B7A]" aria-label="3 or more years">3+</p>
+            <p class="font-black text-4xl text-[#F97316]" aria-label="3 or more years">3+</p>
             <p class="font-semibold text-sm text-[#393939] mt-1">Years exp.</p>
           </div>
           <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
-            <p class="font-black text-4xl text-[#2F81F7]">30+</p>
+            <p class="font-black text-4xl text-[#0D9488]">30+</p>
             <p class="font-semibold text-sm text-[#393939] mt-1">Projects</p>
           </div>
           <div class="border-[3px] border-black p-4 shadow-[4px_4px_0_#000]">
-            <p class="font-black text-4xl text-[#6366F1]">100k+</p>
+            <p class="font-black text-4xl text-[#7C3AED]">100k+</p>
             <p class="font-semibold text-sm text-[#393939] mt-1">Lines of Code</p>
           </div>
         </div>

@@ -21,7 +21,7 @@ export class ServicesComponent {
       title: 'Backend Development',
       description: 'Robust REST APIs with C# and .NET, serverless AWS architecture (Lambda, API Gateway, S3), and clean architecture patterns — DDD and SOLID. Test coverage above 85%.',
       tags: ['C#', 'Java', '.NET', 'AWS', 'REST APIs', 'ASP.NET'],
-      accent: '#2F81F7',
+      accent: '#0D9488',
       isCta: false,
     },
     {
@@ -29,7 +29,7 @@ export class ServicesComponent {
       title: 'Frontend Development',
       description: 'High-performance SPAs with Angular and React. Scalable component architecture, TypeScript, and engaging, accessible user experiences.',
       tags: ['Angular', 'React', 'TypeScript', 'Next.js'],
-      accent: '#FF6B7A',
+      accent: '#F97316',
       isCta: false,
     },
     {
@@ -37,7 +37,7 @@ export class ServicesComponent {
       title: 'Cloud & DevOps',
       description: 'CI/CD pipelines, Docker containerization, and cloud deployment on AWS and Azure. Reliable infrastructure for scalable, production-ready systems.',
       tags: ['AWS', 'Azure', 'Docker', 'GitHub Actions', 'CI/CD'],
-      accent: '#6366F1',
+      accent: '#7C3AED',
       isCta: false,
     },
     {

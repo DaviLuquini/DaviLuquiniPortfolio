@@ -24,7 +24,7 @@ export class ProjectsComponent {
       tags: ['Angular', 'TypeScript', 'C#', 'ASP.NET', 'PostgreSQL', 'Docker', 'JWT'],
       link: 'https://rickandmortydle.com/',
       repo: 'https://github.com/DaviLuquini/RickAndMortyDle',
-      accent: '#FF6B7A',
+      accent: '#F97316',
     },
     {
       title: 'RealtimeAudioBot',
@@ -32,7 +32,7 @@ export class ProjectsComponent {
       description: 'Open-source platform for technical and English assessment (ExamCreator). Wizard-style flow with browser audio recording and real-time AI conversation. Uses SignalR for live communication and the OpenAI API for AI-based assessments.',
       tags: ['React', 'Vite', 'TypeScript', 'Tailwind', 'SignalR', '.NET', 'AWS Lambda', 'OpenAI'],
       repo: 'https://github.com/DaviLuquini/RealtimeAudioBot',
-      accent: '#2F81F7',
+      accent: '#0D9488',
     },
   ];
 }

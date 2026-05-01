@@ -1,0 +1,31 @@
+.rain-icon {
+  flex-shrink: 0;
+  align-self: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  animation-name: icon-rain;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes icon-rain {
+  0% {
+    transform: translateY(-28px);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.8;
+  }
+
+  85% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+}
