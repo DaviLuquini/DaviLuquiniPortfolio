@@ -22,7 +22,7 @@ export class ExperienceComponent {
     {
       company: 'SporTI',
       role: 'Fullstack Developer',
-      period: 'Nov 2025 – Present',
+      period: 'Nov 2025',
       location: 'Remote',
       bullets: [
         'Developing new screens and flows on the platform using ASP.NET MVC, ensuring continuous improvement of system functionality and user experience.',

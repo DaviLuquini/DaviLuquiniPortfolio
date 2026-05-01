@@ -7,21 +7,22 @@
         <div class="inline-flex items-center gap-2 border-[3px] border-black px-4 py-2 shadow-[3px_3px_0_#000] mb-8"
           role="status" aria-label="Currently Online">
           <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
-          <span class="font-bold text-sm uppercase tracking-widest">Online Now</span>
+          <span class="font-bold text-sm uppercase tracking-widest">{{ t().hero.status }}</span>
         </div>
 
         <h1 class="font-black text-5xl md:text-7xl leading-[1.05] tracking-tighter mb-6">
-          Hi, I'm<br>
+          {{ t().hero.greeting }}<br>
           <span class="bg-[#C9FF47] px-2 inline-block -rotate-1">Davi Luquini</span>,<br>
-          a <span class="bg-[#0D9488] text-white px-2 inline-block min-w-[5.5em]">{{ typedRole() }}</span><span
-            class="typing-cursor text-[#0D9488] ml-0.5" aria-hidden="true">|</span><br>
-          Developer.
+          {{ t().hero.article }} <span class="bg-[#0D9488] text-white px-2 inline-block min-w-[5.5em]">{{ typedRole() }}</span><span
+            class="text-[#0D9488] ml-0.5"
+            [class.typing-cursor]="cursorBlink()"
+            [style.opacity]="cursorVisible() ? '1' : '0'"
+            aria-hidden="true">|</span><br>
+          {{ t().hero.developer }}
         </h1>
 
         <p class="text-[#393939] text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
-          3+ years building scalable web applications using <strong>C#</strong>, <strong>.NET</strong>,
-          <strong>Java</strong>,
-          <strong>Angular</strong>, and <strong>React</strong>. Based in Salvador, Brazil.
+          {{ t().hero.description }}
         </p>
 
         <div class="flex flex-wrap gap-2 mb-10" role="list" aria-label="Core technologies">
@@ -35,11 +36,11 @@
         <div class="flex flex-wrap gap-4">
           <a href="#projects"
             class="font-black text-base px-7 py-3.5 bg-black text-white border-[3px] border-black shadow-[5px_5px_0_#C9FF47] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
-            See my projects →
+            {{ t().hero.ctaProjects }}
           </a>
           <a href="mailto:daviluquini7@gmail.com"
             class="font-black text-base px-7 py-3.5 bg-white text-black border-[3px] border-black shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
-            Contact me
+            {{ t().hero.ctaContact }}
           </a>
         </div>
       </div>

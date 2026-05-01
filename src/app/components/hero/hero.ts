@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, afterNextRender, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, afterNextRender, inject, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,11 +10,14 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage],
 })
 export class HeroComponent {
+  protected readonly t = inject(LanguageService).t;
   protected readonly techs = ['C#', '.NET', 'Java', 'Angular', 'React', 'TypeScript', 'AWS', 'Azure'];
 
   private readonly roles = ['Fullstack', 'Backend', 'Frontend'];
 
   protected readonly typedRole = signal(this.roles[0]);
+  protected readonly cursorVisible = signal(true);
+  protected readonly cursorBlink = signal(true);
 
   private roleIndex = 0;
   private charIndex = this.roles[0].length;
@@ -32,6 +36,8 @@ export class HeroComponent {
     const current = this.roles[this.roleIndex];
 
     if (this.isDeleting) {
+      this.cursorVisible.set(false);
+      this.cursorBlink.set(false);
       this.charIndex--;
       this.typedRole.set(current.slice(0, this.charIndex));
       if (this.charIndex === 0) {
@@ -42,9 +48,12 @@ export class HeroComponent {
       }
       setTimeout(() => this.tick(), 45);
     } else {
+      this.cursorVisible.set(true);
+      this.cursorBlink.set(false);
       this.charIndex++;
       this.typedRole.set(this.roles[this.roleIndex].slice(0, this.charIndex));
       if (this.charIndex === this.roles[this.roleIndex].length) {
+        this.cursorBlink.set(true);
         setTimeout(() => {
           this.isDeleting = true;
           this.tick();
