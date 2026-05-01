@@ -14,6 +14,14 @@
         class="font-black text-base px-7 py-3.5 bg-black text-white border-[3px] border-black shadow-[5px_5px_0_#C9FF47] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
         daviluquini7&#64;gmail.com →
       </a>
+      <button
+        (click)="copyEmail()"
+        [class]="copied() ? 'bg-[#C9FF47] text-black border-black' : 'bg-white text-black border-black'"
+        class="font-bold text-base px-7 py-3.5 border-[3px] shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150"
+        [attr.aria-label]="copied() ? 'Email copied to clipboard' : 'Copy email address'"
+      >
+        {{ copied() ? '✓ Copied!' : 'Copy email' }}
+      </button>
       <a href="https://github.com/DaviLuquini" target="_blank" rel="noopener noreferrer"
         aria-label="Davi Luquini on GitHub"
         class="font-bold text-base px-7 py-3.5 bg-white text-black border-[3px] border-black shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">

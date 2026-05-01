@@ -1,3 +1,12 @@
+<div
+  class="fixed top-0 left-0 z-50 h-[3px] bg-[#C9FF47] pointer-events-none transition-[width] duration-75"
+  [style.width]="scrollProgress() + '%'"
+  role="progressbar"
+  aria-label="Page scroll progress"
+  [attr.aria-valuenow]="scrollProgress()"
+  aria-valuemin="0"
+  aria-valuemax="100"
+></div>
 <app-navbar />
 <main id="main-content">
   <app-hero />

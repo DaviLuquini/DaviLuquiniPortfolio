@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, afterNextRender, signal } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
 import { AboutComponent } from './components/about/about';
@@ -22,4 +22,15 @@ import { FooterComponent } from './components/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  protected readonly scrollProgress = signal(0);
+
+  constructor() {
+    afterNextRender(() => {
+      window.addEventListener('scroll', () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        this.scrollProgress.set(max > 0 ? Math.min((window.scrollY / max) * 100, 100) : 0);
+      }, { passive: true });
+    });
+  }
+}
