@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, WritableSignal, afterNextRender, signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, WritableSignal, afterNextRender, inject, signal, viewChild } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-about',
@@ -9,6 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage],
 })
 export class AboutComponent {
+  protected readonly t = inject(LanguageService).t;
   private readonly statsRef = viewChild<ElementRef>('statsSection');
 
   protected readonly yearsCount = signal(0);

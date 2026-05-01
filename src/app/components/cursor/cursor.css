@@ -1,0 +1,49 @@
+:host {
+  display: contents;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  will-change: transform;
+  transition: background-color 0.15s, width 0.15s, height 0.15s;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  will-change: transform;
+  transition: border-color 0.15s, width 0.2s, height 0.2s;
+}
+
+.cursor-dot.is-hovering {
+  background: #0D9488;
+  width: 10px;
+  height: 10px;
+}
+
+.cursor-ring.is-hovering {
+  border-color: #0D9488;
+  width: 44px;
+  height: 44px;
+}
+
+@media (pointer: coarse) {
+  :host { display: none; }
+}

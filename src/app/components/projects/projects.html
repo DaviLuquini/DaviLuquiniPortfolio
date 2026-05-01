@@ -1,13 +1,14 @@
 <section id="projects" aria-labelledby="projects-heading" class="bg-white border-b-[3px] border-black py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="flex items-center gap-3 mb-12">
+    <div data-reveal class="flex items-center gap-3 mb-12">
       <span class="font-black text-sm uppercase tracking-widest bg-[#FF6B7A] text-white px-3 py-1" aria-hidden="true">04</span>
-      <h2 id="projects-heading" class="font-black text-3xl md:text-4xl">Featured Projects</h2>
+      <h2 id="projects-heading" class="font-black text-3xl md:text-4xl">{{ t().projects.title }}</h2>
     </div>
 
     <div class="flex flex-col gap-8">
       @for (project of projects; track project.title) {
         <article
+          data-reveal
           class="border-[3px] border-black shadow-[8px_8px_0_#000] hover:shadow-[4px_4px_0_#000] hover:translate-x-1 hover:translate-y-1 transition-all duration-150 overflow-hidden"
           [attr.aria-label]="project.title"
         >
@@ -31,7 +32,7 @@
                     class="font-bold text-sm px-4 py-2 bg-black text-white border-[3px] border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
                     [attr.aria-label]="'Visit ' + project.title + ' website'"
                   >
-                    Visit site →
+                    {{ t().projects.visit }}
                   </a>
                 }
                 @if (project.repo) {
@@ -42,7 +43,7 @@
                     class="font-bold text-sm px-4 py-2 bg-white text-black border-[3px] border-black shadow-[4px_4px_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
                     [attr.aria-label]="'View ' + project.title + ' on GitHub'"
                   >
-                    GitHub →
+                    {{ t().projects.github }}
                   </a>
                 }
               </div>

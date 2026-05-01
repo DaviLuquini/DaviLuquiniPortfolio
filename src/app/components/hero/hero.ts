@@ -5,6 +5,7 @@ import { NgOptimizedImage } from '@angular/common';
   selector: 'app-hero',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './hero.html',
+  styleUrl: './hero.css',
   imports: [NgOptimizedImage],
 })
 export class HeroComponent {

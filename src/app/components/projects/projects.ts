@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 interface Project {
   title: string;
@@ -16,6 +17,7 @@ interface Project {
   templateUrl: './projects.html',
 })
 export class ProjectsComponent {
+  protected readonly t = inject(LanguageService).t;
   protected readonly projects: Project[] = [
     {
       title: 'RickAndMortyDle',

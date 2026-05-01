@@ -1,12 +1,12 @@
 <footer id="contact" aria-label="Contact and footer" class="bg-white py-20">
   <div class="max-w-6xl mx-auto px-6">
-    <p class="font-black text-sm uppercase tracking-widest text-[#393939] mb-4">05 / Let's connect</p>
+    <p class="font-black text-sm uppercase tracking-widest text-[#393939] mb-4">{{ t().footer.label }}</p>
     <h2 class="font-black text-4xl md:text-6xl leading-tight mb-6">
-      Got a project?<br>
-      <span class="bg-[#FACC15] px-2">Let's build it.</span>
+      {{ t().footer.heading }}<br>
+      <span class="bg-[#FACC15] px-2">{{ t().footer.highlight }}</span>
     </h2>
     <p class="text-[#393939] text-lg max-w-xl mb-10 leading-relaxed">
-      I'm open to new opportunities, freelance projects, and collaborations. Drop me a message!
+      {{ t().footer.subtitle }}
     </p>
 
     <div class="flex flex-col sm:flex-row flex-wrap gap-4 mb-16">
@@ -14,13 +14,11 @@
         class="font-black text-base px-7 py-3.5 bg-black text-white border-[3px] border-black shadow-[5px_5px_0_#C9FF47] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
         daviluquini7&#64;gmail.com →
       </a>
-      <button
-        (click)="copyEmail()"
+      <button (click)="copyEmail()"
         [class]="copied() ? 'bg-[#C9FF47] text-black border-black' : 'bg-white text-black border-black'"
         class="font-bold text-base px-7 py-3.5 border-[3px] shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150"
-        [attr.aria-label]="copied() ? 'Email copied to clipboard' : 'Copy email address'"
-      >
-        {{ copied() ? '✓ Copied!' : 'Copy email' }}
+        [attr.aria-label]="copied() ? 'Email copied to clipboard' : 'Copy email address'">
+        {{ copied() ? t().footer.copied : t().footer.copyBtn }}
       </button>
       <a href="https://github.com/DaviLuquini" target="_blank" rel="noopener noreferrer"
         aria-label="Davi Luquini on GitHub"
@@ -35,9 +33,23 @@
     </div>
 
     <div class="border-t-[3px] border-black pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="font-black text-2xl tracking-tighter">DL.</div>
-      <p class="text-[#393939] text-sm font-medium">Built with Angular &amp; TailwindCSS</p>
-      <p class="text-[#393939] text-sm">&copy; 2026 Davi Luquini. All rights reserved.</p>
+      <button (click)="triggerEasterEgg()"
+        class="dl-btn font-black text-2xl tracking-tighter transition-transform duration-100 select-none"
+        aria-label="Davi Luquini">DL.</button>
+      <p class="text-[#393939] text-sm font-medium">{{ t().footer.built }}</p>
+      <p class="text-[#393939] text-sm">{{ t().footer.rights }}</p>
     </div>
   </div>
+
+  @if (easterEgg()) {
+  <div class="fixed inset-x-0 bottom-8 flex justify-center z-50 pointer-events-none px-4" role="alert"
+    aria-live="assertive">
+    <div
+      class="easter-egg-toast bg-black text-[#C9FF47] font-mono border-[3px] border-[#C9FF47] px-6 py-4 shadow-[6px_6px_0_#C9FF47] max-w-sm w-full">
+      <p class="text-xs text-[#0D9488] mb-1">$ ./portfolio --secret-found</p>
+      <p class="font-bold text-sm">Built with ❤️</p>
+      <p class="text-xs mt-1 text-[#C9FF47]/70">by Davi Luquini · Salvador, Brazil · 2026</p>
+    </div>
+  </div>
+  }
 </footer>

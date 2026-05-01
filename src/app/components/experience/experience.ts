@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 interface Job {
   company: string;
@@ -16,6 +17,7 @@ interface Job {
   templateUrl: './experience.html',
 })
 export class ExperienceComponent {
+  protected readonly t = inject(LanguageService).t;
   protected readonly jobs: Job[] = [
     {
       company: 'SporTI',

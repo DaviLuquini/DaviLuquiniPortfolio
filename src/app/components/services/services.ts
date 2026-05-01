@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 interface Service {
   number: string;
@@ -15,6 +16,7 @@ interface Service {
   templateUrl: './services.html',
 })
 export class ServicesComponent {
+  protected readonly t = inject(LanguageService).t;
   protected readonly services: Service[] = [
     {
       number: '01',
