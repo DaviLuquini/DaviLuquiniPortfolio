@@ -29,12 +29,21 @@ export class ProjectsComponent {
       accent: '#F97316',
     },
     {
-      title: 'RealtimeAudioBot',
-      period: '2025 – 2026',
-      description: 'Open-source platform for technical and English assessment (ExamCreator). Wizard-style flow with browser audio recording and real-time AI conversation. Uses SignalR for live communication and the OpenAI API for AI-based assessments.',
-      tags: ['React', 'Vite', 'TypeScript', 'Tailwind', 'SignalR', '.NET', 'AWS Lambda', 'OpenAI'],
-      repo: 'https://github.com/DaviLuquini/RealtimeAudioBot',
-      accent: '#0D9488',
-    },
+      title: 'ThumbGerador',
+      period: '2026',
+      description: 'This project is an open-source template for a Landing Page and Pricing Page created with a focus on high conversion, aimed at a SaaS for creating thumbnails with AI. The project has the Landing Page and Pricing Page ready to use.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'High Conversion', 'Template', 'SaaS', 'AI', 'Landing Page', 'Pricing Page'],
+      link: 'https://thumbgerador.com/',
+      repo: 'https://github.com/DaviLuquini/ThumbGerador',
+      accent: '#FF1493',
+    }
+    // {
+    //   title: 'RealtimeAudioBot',
+    //   period: '2025 – 2026',
+    //   description: 'Open-source platform for technical and English assessment (ExamCreator). Wizard-style flow with browser audio recording and real-time AI conversation. Uses SignalR for live communication and the OpenAI API for AI-based assessments.',
+    //   tags: ['React', 'Vite', 'TypeScript', 'Tailwind', 'SignalR', '.NET', 'AWS Lambda', 'OpenAI'],
+    //   repo: 'https://github.com/DaviLuquini/RealtimeAudioBot',
+    //   accent: '#0D9488',
+    // },
   ];
 }
