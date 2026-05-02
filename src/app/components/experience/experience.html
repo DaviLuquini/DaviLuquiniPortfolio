@@ -42,7 +42,7 @@
             @for (bullet of job.bullets; track bullet; let bulletIdx = $index) {
               <li class="flex gap-3 text-gray-300 leading-relaxed">
                 <span class="text-[#7C3AED] font-black flex-shrink-0" aria-hidden="true">—</span>
-                <span>{{ t().experience.jobs[jobIdx]?.bullets[bulletIdx] ?? bullet }}</span>
+                <span>{{ t().experience.jobs[jobIdx]?.bullets?.[bulletIdx] ?? bullet }}</span>
               </li>
             }
           </ul>

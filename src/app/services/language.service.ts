@@ -75,7 +75,7 @@ const pt: typeof en = {
   nav: { about: 'Sobre', services: 'Serviços', experience: 'Experiência', projects: 'Projetos', talk: 'Fale comigo →' },
   hero: {
     status: 'Online Agora', greeting: 'Olá, sou', article: 'um', developer: 'Developer.',
-    description: '3+ anos construindo aplicações web escaláveis com C#, .NET, Java, Angular e React. Baseado em Salvador, Brasil.',
+    description: '3+ anos construindo aplicações web escaláveis com C#, .NET, Java, Angular e React. Moro em Salvador, Brasil.',
     ctaProjects: 'Ver projetos →', ctaContact: 'Fale comigo',
   },
   about: {
