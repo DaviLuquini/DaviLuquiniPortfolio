@@ -17,6 +17,11 @@ interface Service {
 })
 export class ServicesComponent {
   protected readonly t = inject(LanguageService).t;
+
+  protected getTagBg(accent: string): string {
+    return `color-mix(in srgb, ${accent} 18%, var(--color-surface))`;
+  }
+
   protected readonly services: Service[] = [
     {
       number: '01',

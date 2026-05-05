@@ -1,21 +1,21 @@
-<section id="services" aria-labelledby="services-heading" class="bg-white border-b-[3px] border-black py-20 md:py-28">
+<section id="services" aria-labelledby="services-heading" class="bg-surface border-b-[3px] border-rule py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div data-reveal class="flex items-center gap-3 mb-12">
-      <span class="font-black text-sm uppercase tracking-widest bg-[#F97316] text-white px-3 py-1" aria-hidden="true">02</span>
-      <h2 id="services-heading" class="font-black text-3xl md:text-4xl">{{ t().services.title }}</h2>
+      <span class="font-black text-sm uppercase tracking-widest bg-orange text-white px-3 py-1" aria-hidden="true">02</span>
+      <h2 id="services-heading" class="font-black text-3xl md:text-4xl text-ink">{{ t().services.title }}</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       @for (service of services; track service.number; let i = $index) {
         @if (service.isCta) {
-          <div data-reveal class="border-[3px] border-black p-8 bg-[#FACC15] shadow-[6px_6px_0_#000] flex flex-col justify-between min-h-[240px]">
-            <div class="font-black text-5xl leading-none mb-6" aria-hidden="true">→</div>
+          <div data-reveal class="border-[3px] border-rule p-8 bg-yellow shadow-brutal-lg flex flex-col justify-between min-h-[240px]">
+            <div class="font-black text-5xl leading-none mb-6 text-ink-on-accent" aria-hidden="true">→</div>
             <div>
-              <h3 class="font-black text-2xl text-black mb-3">{{ t().services.ctaTitle }}</h3>
-              <p class="text-black font-medium text-base mb-6 leading-relaxed">{{ t().services.ctaDesc }}</p>
+              <h3 class="font-black text-2xl text-ink-on-accent mb-3">{{ t().services.ctaTitle }}</h3>
+              <p class="text-ink-on-accent font-medium text-base mb-6 leading-relaxed">{{ t().services.ctaDesc }}</p>
               <a
                 href="mailto:daviluquini7@gmail.com"
-                class="inline-block font-black text-sm px-5 py-2.5 bg-black text-white border-[3px] border-black shadow-[4px_4px_0_rgba(0,0,0,0.25)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
+                class="inline-block font-black text-sm px-5 py-2.5 bg-ink text-surface border-[3px] border-rule shadow-[4px_4px_0_rgba(0,0,0,0.25)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-150"
               >
                 {{ t().services.ctaBtn }}
               </a>
@@ -24,21 +24,22 @@
         } @else {
           <article
             data-reveal
-            class="border-[3px] border-black p-8 bg-white shadow-[6px_6px_0_#000] hover:shadow-[3px_3px_0_#000] hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
+            class="border-[3px] border-rule p-8 bg-surface shadow-brutal-lg hover:shadow-brutal-xs hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-150"
             [attr.aria-label]="service.title"
           >
             <div class="font-black text-4xl leading-none mb-4" [style.color]="service.accent" aria-hidden="true">
               {{ service.number }}
             </div>
-            <h3 class="font-black text-xl text-[#0b0b0b] mb-3">{{ t().services.cards[i]?.title }}</h3>
-            <p class="text-[#393939] leading-relaxed mb-6">{{ t().services.cards[i]?.description }}</p>
+            <h3 class="font-black text-xl text-ink mb-3">{{ t().services.cards[i]?.title }}</h3>
+            <p class="text-ink-muted leading-relaxed mb-6">{{ t().services.cards[i]?.description }}</p>
             <div class="flex flex-wrap gap-2" role="list" aria-label="Technologies">
               @for (tag of service.tags; track tag) {
                 <span
                   role="listitem"
-                  class="font-semibold text-xs border-2 border-black px-2.5 py-1"
+                  class="font-semibold text-xs border-2 px-2.5 py-1"
                   [style.color]="service.accent"
-                  [style.background-color]="service.accent + '18'"
+                  [style.border-color]="service.accent"
+                  [style.background-color]="getTagBg(service.accent)"
                 >{{ tag }}</span>
               }
             </div>

@@ -1,33 +1,33 @@
-<section id="home" aria-label="Introduction" class="bg-white border-b-[3px] border-black">
+<section id="home" aria-label="Introduction" class="bg-surface border-b-[3px] border-rule">
   <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
     <div class="flex flex-col md:flex-row items-start md:items-center gap-12 lg:gap-20">
 
       <!-- Text content -->
       <div class="flex-1">
-        <div class="inline-flex items-center gap-2 border-[3px] border-black px-4 py-2 shadow-[3px_3px_0_#000] mb-8"
+        <div class="inline-flex items-center gap-2 border-[3px] border-rule px-4 py-2 bg-surface shadow-brutal-xs mb-8"
           role="status" aria-label="Currently Online">
           <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></span>
-          <span class="font-bold text-sm uppercase tracking-widest">{{ t().hero.status }}</span>
+          <span class="font-bold text-sm uppercase tracking-widest text-ink">{{ t().hero.status }}</span>
         </div>
 
-        <h1 class="font-black text-5xl md:text-7xl leading-[1.05] tracking-tighter mb-6">
+        <h1 class="font-black text-5xl md:text-7xl leading-[1.05] tracking-tighter mb-6 text-ink">
           {{ t().hero.greeting }}<br>
-          <span class="bg-[#C9FF47] px-2 inline-block -rotate-1">Davi Luquini</span>,<br>
-          {{ t().hero.article }} <span class="bg-[#0D9488] text-white px-2 inline-block min-w-[5.5em]">{{ typedRole() }}</span><span
-            class="text-[#0D9488] ml-0.5"
+          <span class="bg-lime text-ink-on-accent px-2 inline-block -rotate-1">Davi Luquini</span>,<br>
+          {{ t().hero.article }} <span class="bg-teal text-white px-2 inline-block min-w-[5.5em]">{{ typedRole() }}</span><span
+            class="text-teal ml-0.5"
             [class.typing-cursor]="cursorBlink()"
             [style.opacity]="cursorVisible() ? '1' : '0'"
             aria-hidden="true">|</span><br>
           {{ t().hero.developer }}
         </h1>
 
-        <p class="text-[#393939] text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
+        <p class="text-ink-muted text-lg md:text-xl font-medium max-w-xl mb-8 leading-relaxed">
           {{ t().hero.description }}
         </p>
 
         <div class="flex flex-wrap gap-2 mb-10" role="list" aria-label="Core technologies">
           @for (tech of techs; track tech) {
-          <span role="listitem" class="font-bold text-sm border-[3px] border-black px-3 py-1 shadow-[3px_3px_0_#000]">
+          <span role="listitem" class="font-bold text-sm border-[3px] border-rule bg-surface text-ink px-3 py-1 shadow-brutal-xs">
             {{ tech }}
           </span>
           }
@@ -35,11 +35,11 @@
 
         <div class="flex flex-wrap gap-4">
           <a href="#projects"
-            class="font-black text-base px-7 py-3.5 bg-black text-white border-[3px] border-black shadow-[5px_5px_0_#C9FF47] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            class="font-black text-base px-7 py-3.5 bg-ink text-surface border-[3px] border-rule shadow-[5px_5px_0_#C9FF47] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
             {{ t().hero.ctaProjects }}
           </a>
           <a href="mailto:daviluquini7@gmail.com"
-            class="font-black text-base px-7 py-3.5 bg-white text-black border-[3px] border-black shadow-[5px_5px_0_#000] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
+            class="font-black text-base px-7 py-3.5 bg-surface text-ink border-[3px] border-rule shadow-brutal-md hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
             {{ t().hero.ctaContact }}
           </a>
         </div>
@@ -49,12 +49,12 @@
       <div class="hidden md:block flex-shrink-0" aria-hidden="true">
         <div class="relative">
           <div
-            class="w-[450px] h-[600px] border-[4px] border-black shadow-[12px_12px_0_#000] bg-[#1E293B] flex items-center justify-center overflow-hidden">
+            class="w-[450px] h-[600px] border-[4px] border-rule shadow-brutal-2xl bg-[#1E293B] flex items-center justify-center overflow-hidden">
             <img ngSrc="assets/davi.png" width="500" height="600" alt="Davi" class="w-full h-full object-cover"
               priority>
           </div>
           <div
-            class="absolute -bottom-4 -right-4 bg-[#FACC15] border-[3px] border-black px-3 py-1.5 font-black text-xs uppercase tracking-widest shadow-[3px_3px_0_#000]">
+            class="absolute -bottom-4 -right-4 bg-yellow text-ink-on-accent border-[3px] border-rule px-3 py-1.5 font-black text-xs uppercase tracking-widest shadow-brutal-xs">
             Salvador, Brazil
           </div>
         </div>

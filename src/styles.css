@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
+@theme {
+  --color-surface: #ffffff;
+  --color-surface-2: #fafaf7;
+  --color-surface-inverse: #0a0a0a;
+  --color-surface-inverse-2: #1a1a1a;
+
+  --color-ink: #0a0a0a;
+  --color-ink-muted: #393939;
+  --color-ink-faint: #6b6b6b;
+  --color-ink-on-inverse: #f4f4f5;
+  --color-ink-on-inverse-muted: #a1a1aa;
+  --color-ink-on-inverse-faint: #71717a;
+  --color-ink-on-accent: #0a0a0a;
+
+  --color-rule: #0a0a0a;
+  --color-rule-on-inverse: #f4f4f5;
+  --color-shadow: #0a0a0a;
+
+  --color-lime: #C9FF47;
+  --color-teal: #0D9488;
+  --color-purple: #7C3AED;
+  --color-orange: #F97316;
+  --color-yellow: #FACC15;
+  --color-rose: #FF6B7A;
+  --color-pink: #FF1493;
+  --color-linkedin: #0A66C2;
+}
+
+[data-theme="dark"] {
+  --color-surface: #000000;
+  --color-surface-2: #161616;
+  --color-surface-inverse: #0a0a0a;
+  --color-surface-inverse-2: #1a1a1a;
+
+  --color-ink: #f4f4f5;
+  --color-ink-muted: #a1a1aa;
+  --color-ink-faint: #71717a;
+
+  --color-rule: #f4f4f5;
+  --color-shadow: #f4f4f5;
+}
+
+@utility shadow-brutal-xs { box-shadow: 3px 3px 0 var(--color-shadow); }
+@utility shadow-brutal-sm { box-shadow: 4px 4px 0 var(--color-shadow); }
+@utility shadow-brutal-md { box-shadow: 5px 5px 0 var(--color-shadow); }
+@utility shadow-brutal-lg { box-shadow: 6px 6px 0 var(--color-shadow); }
+@utility shadow-brutal-xl { box-shadow: 8px 8px 0 var(--color-shadow); }
+@utility shadow-brutal-2xl { box-shadow: 12px 12px 0 var(--color-shadow); }
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -10,8 +59,8 @@ html {
 
 body {
   font-family: 'Onest', sans-serif;
-  background-color: #ffffff;
-  color: #0a0a0a;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,4 +94,23 @@ body {
   background: radial-gradient(600px circle at var(--mx) var(--my), rgba(124,58,237,0.15), transparent 80%);
   pointer-events: none;
   z-index: 0;
+}
+
+[data-theme="dark"] #experience::before {
+  background: radial-gradient(600px circle at var(--mx) var(--my), rgba(124,58,237,0.22), transparent 80%);
+}
+
+[data-theme="dark"] .noise-svg {
+  opacity: 0.05;
+}
+
+[data-theme="dark"] .rain-icon[data-icon="cursor"] {
+  filter: invert(1);
+}
+
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
 }

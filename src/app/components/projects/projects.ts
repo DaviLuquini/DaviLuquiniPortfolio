@@ -9,6 +9,7 @@ interface Project {
   link?: string;
   repo?: string;
   accent: string;
+  showStats?: boolean;
 }
 
 @Component({
@@ -27,6 +28,7 @@ export class ProjectsComponent {
       link: 'https://rickandmortydle.com/',
       repo: 'https://github.com/DaviLuquini/RickAndMortyDle',
       accent: '#F97316',
+      showStats: true,
     },
     {
       title: 'ThumbGerador',

@@ -58,6 +58,7 @@ const en = {
   },
   projects: {
     title: 'Featured Projects', visit: 'Visit site →', github: 'GitHub →',
+    stats: { title: 'Live traffic', monthly: '+100 monthly visits', total: '+500 total visits' },
     items: [
       { description: 'A Dle-style guessing game inspired by Loldle, using the public Rick and Morty API. Features an Angular SPA with a modular .NET backend following DDD/SOLID principles, JWT authentication, PostgreSQL storage, and Docker deployment.' },
       // { description: 'Open-source platform for technical and English assessment (ExamCreator). Wizard-style flow with browser audio recording and real-time AI conversation. Uses SignalR for live communication and the OpenAI API for AI-based assessments.' },
@@ -117,6 +118,7 @@ const pt: typeof en = {
   },
   projects: {
     title: 'Projetos em Destaque', visit: 'Ver site →', github: 'GitHub →',
+    stats: { title: 'Tráfego em tempo real', monthly: '+100 visitas mensais', total: '+500 visitas no total' },
     items: [
       { description: 'Jogo de adivinhação estilo Dle inspirado no Loldle, utilizando a API pública de Rick and Morty. Conta com um SPA em Angular e backend modular em .NET seguindo princípios DDD/SOLID, autenticação JWT, persistência em PostgreSQL e deploy com Docker.' },
       { description: 'Este projeto é um template open-source de Landing Page e Pricing Page criado com foco em alta conversão, voltado para um SaaS de criação de thumbnails com IA. O projeto tem a Landing Page e a Pricing Page prontas para uso.' },

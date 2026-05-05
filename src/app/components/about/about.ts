@@ -51,16 +51,16 @@ export class AboutComponent {
     requestAnimationFrame(tick);
   }
 
-  protected readonly rainIcons: { src: string; style: Record<string, string> }[] = [
-    { src: 'claude.png',  style: { 'animation-delay': '0s',   'animation-duration': '3.2s' } },
-    { src: 'codex.png',   style: { 'animation-delay': '1.1s', 'animation-duration': '2.7s' } },
-    { src: 'cursor.png',  style: { 'animation-delay': '0.4s', 'animation-duration': '3.6s' } },
-    { src: 'claude.png',  style: { 'animation-delay': '2.0s', 'animation-duration': '2.9s' } },
-    { src: 'codex.png',   style: { 'animation-delay': '0.8s', 'animation-duration': '3.3s' } },
-    { src: 'cursor.png',  style: { 'animation-delay': '1.6s', 'animation-duration': '2.6s' } },
-    { src: 'claude.png',  style: { 'animation-delay': '2.8s', 'animation-duration': '3.8s' } },
-    { src: 'codex.png',   style: { 'animation-delay': '0.2s', 'animation-duration': '3.1s' } },
-    { src: 'cursor.png',  style: { 'animation-delay': '1.4s', 'animation-duration': '2.8s' } },
+  protected readonly rainIcons: { src: string; name: 'claude' | 'codex' | 'cursor'; style: Record<string, string> }[] = [
+    { src: 'claude.png', name: 'claude', style: { 'animation-delay': '0s',   'animation-duration': '3.2s' } },
+    { src: 'codex.png',  name: 'codex',  style: { 'animation-delay': '1.1s', 'animation-duration': '2.7s' } },
+    { src: 'cursor.png', name: 'cursor', style: { 'animation-delay': '0.4s', 'animation-duration': '3.6s' } },
+    { src: 'claude.png', name: 'claude', style: { 'animation-delay': '2.0s', 'animation-duration': '2.9s' } },
+    { src: 'codex.png',  name: 'codex',  style: { 'animation-delay': '0.8s', 'animation-duration': '3.3s' } },
+    { src: 'cursor.png', name: 'cursor', style: { 'animation-delay': '1.6s', 'animation-duration': '2.6s' } },
+    { src: 'claude.png', name: 'claude', style: { 'animation-delay': '2.8s', 'animation-duration': '3.8s' } },
+    { src: 'codex.png',  name: 'codex',  style: { 'animation-delay': '0.2s', 'animation-duration': '3.1s' } },
+    { src: 'cursor.png', name: 'cursor', style: { 'animation-delay': '1.4s', 'animation-duration': '2.8s' } },
   ];
 
   protected readonly skills = [
